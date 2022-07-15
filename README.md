@@ -1,4 +1,4 @@
-# PHP 7.4 + Mysql 8.0 + Symfony 4.4 + Docker
+# PHP 8.1 + Mysql 8.0 + Symfony 5.4 + Docker
 
 How to run?
 --
@@ -11,6 +11,14 @@ How to run?
 
    `make start`
 
-3. Open in browser
+3. Access Docker container
+
+   `make ssh-be`
+
+4. Up server by port 8000 in background
+
+   `symfony server:start --port=8000 -d`
+
+5. Open in browser
 
    http://127.0.0.1:1000/
