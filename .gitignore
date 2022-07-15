@@ -1,0 +1,16 @@
+.idea
+.vscode
+.DS_Store
+###> docker configuration ###
+docker-compose.yml
+###< docker configuration ###
+
+###> symfony/framework-bundle ###
+/.env.local
+/.env.local.php
+/.env.*.local
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
