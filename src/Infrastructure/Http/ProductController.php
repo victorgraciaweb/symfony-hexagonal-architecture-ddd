@@ -18,12 +18,13 @@ class ProductController
     public function create(Request $request): JsonResponse
     {
         $product = $this->productManager->createProduct('Name', 'sku', 100);
+
         return new JsonResponse(
             [
                 'product' => [
                     'id' => $product->id(),
                     'name' => $product->name(),
-                ]
+                ],
             ]
         );
     }
@@ -40,7 +41,7 @@ class ProductController
                 'product' => [
                     'id' => $product->id(),
                     'name' => $product->name(),
-                ]
+                ],
             ]
         );
     }

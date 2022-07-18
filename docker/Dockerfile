@@ -32,7 +32,7 @@ RUN curl https://getcomposer.org/composer.phar -o /usr/bin/composer && chmod +x 
 RUN composer self-update
 
 # Install PHP-CS-FIXER
-RUN wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.2.1/php-cs-fixer.phar -O php-cs-fixer
+RUN wget https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v3.9.4/php-cs-fixer.phar -O php-cs-fixer
 RUN chmod a+x php-cs-fixer
 RUN mv php-cs-fixer /usr/local/bin/php-cs-fixer
 
