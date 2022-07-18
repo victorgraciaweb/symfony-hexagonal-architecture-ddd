@@ -13,12 +13,20 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
+    App\Infrastructure\Http\:
+        resource: '../src/Infrastructure/Http/'
+        tags: [ 'controller.service_arguments' ]
+
     App\:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
-            - '../src/Entity/'
+            - '../src/Domain/Model/'
             - '../src/Kernel.php'
+            - '../src/Infrastructure/Http/'
+            - '../src/Infrastructure/Repository/DoctrineRepository.php'
+
+    App\Domain\Repository\ProductRepository: '@App\Infrastructure\Repository\DoctrineProductRepository'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

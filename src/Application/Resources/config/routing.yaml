@@ -1,0 +1,8 @@
+create_product:
+  path: /product
+  methods: POST
+  controller: App\Infrastructure\Http\ProductController::create
+get_product:
+  path: /product/{id}
+  methods: GET
+  controller: App\Infrastructure\Http\ProductController::get
